@@ -53,4 +53,3 @@ document.getElementById("btn-events").addEventListener('click',()=>display('sect
 document.getElementById("btn-study").addEventListener('click',()=>display('section-study'))
 document.getElementById("btn-team").addEventListener('click',()=>display('section-team'))
 document.getElementsByClassName("btn-team")[0].addEventListener('click',()=>display('section-team'))
-

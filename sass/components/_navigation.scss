@@ -116,7 +116,7 @@
 }
 
 #navigation__checkbox:checked ~ .navigation{
-    display: flex;
+    display: flex !important;
 }
 
 #navigation__checkbox:checked{
