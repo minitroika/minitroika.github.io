@@ -19,7 +19,7 @@
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
-
+       
         // create points
         points = [];
         for(var x = 0; x < width; x = x + width/20) {
@@ -28,8 +28,11 @@
                 var py = y + Math.random()*height/20;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
+                
             }
+
         }
+   
 
         // for each point find the 5 closest points
         for(var i = 0; i < points.length; i++) {
@@ -114,7 +117,13 @@
 
     function animate() {
         if(animateHeader) {
+
             ctx.clearRect(0,0,width,height);
+            ctx.font = "15px Times new Roman";
+            ctx.fillStyle = "white";
+            ctx.textAlign = "right";
+            ctx.fillText("Build by Roopam Garg", canvas.width - 10, canvas.height - 10); 
+    
             for(var i in points) {
                 // detect points in range
                 if(Math.abs(getDistance(target, points[i])) < 4000) {
